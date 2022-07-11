@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		6B9E9820287C9D0C00847E2F /* Tabbar in Frameworks */ = {isa = PBXBuildFile; productRef = 6B9E981F287C9D0C00847E2F /* Tabbar */; };
 		6B9E9822287C9E0600847E2F /* CoordinatorFactoryProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B9E9821287C9E0600847E2F /* CoordinatorFactoryProvider.swift */; };
+		6BBD0026287CADBA0076C1E7 /* MemeCreator in Frameworks */ = {isa = PBXBuildFile; productRef = 6BBD0025287CADBA0076C1E7 /* MemeCreator */; };
 		6BD470022879E9BB00D37AA9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD470012879E9BB00D37AA9 /* AppDelegate.swift */; };
 		6BD470062879E9BB00D37AA9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD470052879E9BB00D37AA9 /* ViewController.swift */; };
 		6BD470092879E9BB00D37AA9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BD470072879E9BB00D37AA9 /* Main.storyboard */; };
@@ -58,6 +59,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6B9E9820287C9D0C00847E2F /* Tabbar in Frameworks */,
+				6BBD0026287CADBA0076C1E7 /* MemeCreator in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -155,6 +157,7 @@
 			name = WalletMaterial;
 			packageProductDependencies = (
 				6B9E981F287C9D0C00847E2F /* Tabbar */,
+				6BBD0025287CADBA0076C1E7 /* MemeCreator */,
 			);
 			productName = WalletMaterial;
 			productReference = 6BD46FFE2879E9BB00D37AA9 /* WalletMaterial.app */;
@@ -614,6 +617,10 @@
 		6B9E981F287C9D0C00847E2F /* Tabbar */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Tabbar;
+		};
+		6BBD0025287CADBA0076C1E7 /* MemeCreator */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = MemeCreator;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

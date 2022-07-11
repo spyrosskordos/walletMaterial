@@ -13,6 +13,8 @@ public protocol CoordinatorFactoryProvider {
         for requirements: Factory.R
     ) -> Factory
     func tabbarCoordinator(dependencies: Dependencies) -> Coordinator
+    func memeCreatorCoordinator(tabbar: Tabbar,dependencies: Dependencies) -> Coordinator
+
 }
 
 public struct Dependencies {

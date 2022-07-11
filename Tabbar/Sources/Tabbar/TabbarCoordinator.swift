@@ -22,7 +22,7 @@ protocol TabbarCoordinator {
 
 }
 
-private final class PWFTabbarCoordinatorImpl: Coordinator, TabbarCoordinator {
+internal final class TabbarCoordinatorImpl: Coordinator, TabbarCoordinator {
 
     private let dependencies: Dependencies
 
@@ -33,9 +33,9 @@ private final class PWFTabbarCoordinatorImpl: Coordinator, TabbarCoordinator {
     func start() {
         let viewModel = TabbarViewModel(coordinator: self)
         let viewController = TabbarViewController(viewModel: viewModel)
-//        dependencies.coordinatorFactoryProvider.availabilityListCoordinator(
-//            tabbar: viewController, dependencies: dependencies
-//        ).start()
+        dependencies.coordinatorFactoryProvider.memeCreatorCoordinator(
+            tabbar: viewController, dependencies: dependencies
+        ).start()
         dependencies.window.rootViewController = viewController
 
     }
@@ -46,7 +46,7 @@ public struct TabbarCoordinatorFactory: CoordinatorFactory {
     public init() {}
 
     public func makeCoordinator(for requirements: TabbarRequirements) -> Coordinator {
-        return PWFTabbarCoordinatorImpl(requirements: requirements)
+        return TabbarCoordinatorImpl(requirements: requirements)
     }
 
 }

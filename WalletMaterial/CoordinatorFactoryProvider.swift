@@ -8,7 +8,11 @@
 import Foundation
 import Common
 import Tabbar
+import MemeCreator
+
 struct WalletMaterialCoordinatorFactoryProvider: CoordinatorFactoryProvider {
+    
+    
     func makeCoordinatorFactory<Factory>(for requirements: Factory.R) -> Factory where Factory : CoordinatorFactory {
         return Factory()
     }
@@ -18,5 +22,9 @@ struct WalletMaterialCoordinatorFactoryProvider: CoordinatorFactoryProvider {
         return TabbarCoordinatorFactory().makeCoordinator(for: requirements)
     }
     
+    func memeCreatorCoordinator(tabbar: Tabbar, dependencies: Dependencies) -> Coordinator {
+        let requirements = MemeCreatorRequirements(tabbar: tabbar, dependencies: dependencies)
+        return MemeCreatorCoordinatorFactory().makeCoordinator(for: requirements)
+    }
     
 }
