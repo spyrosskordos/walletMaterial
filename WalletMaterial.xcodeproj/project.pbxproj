@@ -81,6 +81,7 @@
 				6BD470172879E9BC00D37AA9 /* WalletMaterialTests */,
 				6BD470212879E9BC00D37AA9 /* WalletMaterialUITests */,
 				6BD46FFF2879E9BB00D37AA9 /* Products */,
+				6BD470312879EE8F00D37AA9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -124,6 +125,13 @@
 			path = WalletMaterialUITests;
 			sourceTree = "<group>";
 		};
+		6BD470312879EE8F00D37AA9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -140,6 +148,8 @@
 			dependencies = (
 			);
 			name = WalletMaterial;
+			packageProductDependencies = (
+			);
 			productName = WalletMaterial;
 			productReference = 6BD46FFE2879E9BB00D37AA9 /* WalletMaterial.app */;
 			productType = "com.apple.product-type.application";

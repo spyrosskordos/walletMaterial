@@ -2,6 +2,15 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:MemeCreator">
+   </FileRef>
+   <FileRef
+      location = "group:Tabbar">
+   </FileRef>
+   <FileRef
+      location = "group:Common">
+   </FileRef>
+   <FileRef
       location = "group:WalletMaterial.xcodeproj">
    </FileRef>
 </Workspace>
