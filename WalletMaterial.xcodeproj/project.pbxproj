@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6B9E9820287C9D0C00847E2F /* Tabbar in Frameworks */ = {isa = PBXBuildFile; productRef = 6B9E981F287C9D0C00847E2F /* Tabbar */; };
+		6B9E9822287C9E0600847E2F /* CoordinatorFactoryProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B9E9821287C9E0600847E2F /* CoordinatorFactoryProvider.swift */; };
 		6BD470022879E9BB00D37AA9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD470012879E9BB00D37AA9 /* AppDelegate.swift */; };
 		6BD470062879E9BB00D37AA9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD470052879E9BB00D37AA9 /* ViewController.swift */; };
 		6BD470092879E9BB00D37AA9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BD470072879E9BB00D37AA9 /* Main.storyboard */; };
@@ -35,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6B9E9821287C9E0600847E2F /* CoordinatorFactoryProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorFactoryProvider.swift; sourceTree = "<group>"; };
 		6BD46FFE2879E9BB00D37AA9 /* WalletMaterial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WalletMaterial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BD470012879E9BB00D37AA9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6BD470052879E9BB00D37AA9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -54,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B9E9820287C9D0C00847E2F /* Tabbar in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,6 +108,7 @@
 				6BD4700A2879E9BB00D37AA9 /* Assets.xcassets */,
 				6BD4700C2879E9BB00D37AA9 /* LaunchScreen.storyboard */,
 				6BD4700F2879E9BB00D37AA9 /* Info.plist */,
+				6B9E9821287C9E0600847E2F /* CoordinatorFactoryProvider.swift */,
 			);
 			path = WalletMaterial;
 			sourceTree = "<group>";
@@ -149,6 +154,7 @@
 			);
 			name = WalletMaterial;
 			packageProductDependencies = (
+				6B9E981F287C9D0C00847E2F /* Tabbar */,
 			);
 			productName = WalletMaterial;
 			productReference = 6BD46FFE2879E9BB00D37AA9 /* WalletMaterial.app */;
@@ -266,6 +272,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6BD470062879E9BB00D37AA9 /* ViewController.swift in Sources */,
+				6B9E9822287C9E0600847E2F /* CoordinatorFactoryProvider.swift in Sources */,
 				6BD470022879E9BB00D37AA9 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -602,6 +609,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		6B9E981F287C9D0C00847E2F /* Tabbar */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Tabbar;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 6BD46FF62879E9BB00D37AA9 /* Project object */;
 }
