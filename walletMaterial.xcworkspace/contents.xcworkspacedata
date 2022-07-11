@@ -5,10 +5,10 @@
       location = "group:MemeCreator">
    </FileRef>
    <FileRef
-      location = "group:Tabbar">
+      location = "group:Common">
    </FileRef>
    <FileRef
-      location = "group:Common">
+      location = "group:Tabbar">
    </FileRef>
    <FileRef
       location = "group:WalletMaterial.xcodeproj">
