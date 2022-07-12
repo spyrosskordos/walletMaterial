@@ -6,6 +6,7 @@
 //
 
 import Common
+import Firebase
 import UIKit
 
 @UIApplicationMain
@@ -17,7 +18,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         _ application: UIApplication,
         didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
     ) -> Bool {
-        // Override point for customization after application launch.
+        
+        FirebaseApp.configure()
         let window = UIWindow()
         self.window = window
         self.dependencies = Dependencies(
@@ -25,6 +27,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.dependencies.coordinatorFactoryProvider
             .tabbarCoordinator(dependencies: dependencies)
             .start()
+
         window.makeKeyAndVisible()
         return true
     }

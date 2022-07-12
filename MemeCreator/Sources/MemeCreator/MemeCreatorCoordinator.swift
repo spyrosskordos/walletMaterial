@@ -8,13 +8,18 @@
 import Common
 import Foundation
 import UIKit
+
 public struct MemeCreatorRequirements: Requirements {
     let dependencies: Dependencies
     let tabbar: Tabbar
+    let firestoreRepository: FirestoreRepository
 
-    public init(tabbar: Tabbar, dependencies: Dependencies) {
+    public init(
+        tabbar: Tabbar, firestoreRepository: FirestoreRepository, dependencies: Dependencies
+    ) {
         self.dependencies = dependencies
         self.tabbar = tabbar
+        self.firestoreRepository = firestoreRepository
     }
 }
 
@@ -26,15 +31,19 @@ internal final class MemeCreatorCoordinatorImpl: Coordinator, MemeCreatorCoordin
 
     let dependencies: Dependencies
     let tabbar: Tabbar
+    let firestoreRepository: FirestoreRepository
 
     fileprivate init(requirements: MemeCreatorRequirements) {
         self.dependencies = requirements.dependencies
         self.tabbar = requirements.tabbar
+        self.firestoreRepository = requirements.firestoreRepository
     }
 
     func start() {
         let viewModel = MemeCreatorViewModel(
-            coordinator: self)
+            coordinator: self,
+            firestorRepository: firestoreRepository
+        )
         let viewController = MemeCreatorViewController(viewModel: viewModel)
         let nvc = UINavigationController(rootViewController: viewController)
         nvc.tabBarItem = UITabBarItem(title: "Meme Creator", image: .add, selectedImage: .add)
@@ -52,7 +61,7 @@ public struct MemeCreatorCoordinatorFactory: CoordinatorFactory {
     }
 }
 
-class MockAvailabilityListCoordinatorImpl: Coordinator, MemeCreatorCoordinator {
+class MockMemeCreatorCoordinatorImpl: Coordinator, MemeCreatorCoordinator {
     func start() {
 
     }

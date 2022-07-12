@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+import Common
 class MemeCreatorViewController: UITabBarController {
 
     private var viewModel: MemeCreatorViewModel
@@ -21,8 +21,7 @@ class MemeCreatorViewController: UITabBarController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        addSubSwiftUIView(MemeCreatorView(viewModel: self.viewModel), to: self.view)
     }
     
 

@@ -1,6 +1,6 @@
 //
 //  MemeCreatorView.swift
-//  
+//
 //
 //  Created by Sko on 11/7/22.
 //
@@ -8,13 +8,18 @@
 import SwiftUI
 
 struct MemeCreatorView: View {
+    @StateObject var viewModel: MemeCreatorViewModel
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+
+        }
     }
 }
 
-struct MemeCreatorView_Previews: PreviewProvider {
-    static var previews: some View {
-        MemeCreatorView()
-    }
-}
+//struct MemeCreatorView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        MemeCreatorView(
+//            viewModel: MemeCreatorViewModel(coordinator: MockMemeCreatorCoordinatorImpl(),firestorRepository: <#T##FirestoreRepository#>)
+//        )
+//    }
+//}
