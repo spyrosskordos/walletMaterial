@@ -34,7 +34,7 @@ struct WalletMaterialCoordinatorFactoryProvider: CoordinatorFactoryProvider {
 
 
 
-class AppFireStoreRepository: ObservableObject, FirestoreRepository {
+class FireStoreRepository: ObservableObject, FirestoreRepository {
     
     let path: String
     
