@@ -41,8 +41,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/spyrosskordos/FirebaseWrapper",
       "state" : {
-        "revision" : "8fcf3656f54133a2540cea68e1220c6aab629b48",
-        "version" : "1.0.0"
+        "branch" : "master",
+        "revision" : "939319c46d16b148730aea594cd38fe92284fc19"
       }
     },
     {
