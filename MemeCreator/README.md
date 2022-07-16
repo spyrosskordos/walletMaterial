@@ -1,3 +1,3 @@
 # MemeCreator
 
-A description of this package.
+Not ready

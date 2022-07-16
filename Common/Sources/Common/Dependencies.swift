@@ -12,7 +12,6 @@ import CoordinatorTools
 public protocol AppCoordinatorFactoryProvider:CoordinatorFactoryProvider {
     
     func tabbarCoordinator(dependencies: Dependencies) -> Coordinator
-    func memeCreatorCoordinator(tabbar: Tabbar,dependencies: Dependencies) -> Coordinator
 
 }
 

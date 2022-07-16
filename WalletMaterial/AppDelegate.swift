@@ -6,7 +6,6 @@
 //
 
 import Common
-import Firebase
 import UIKit
 
 @UIApplicationMain
@@ -19,7 +18,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
     ) -> Bool {
         
-        FirebaseApp.configure()
         let window = UIWindow()
         self.window = window
         self.dependencies = Dependencies(

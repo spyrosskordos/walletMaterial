@@ -34,9 +34,6 @@ internal final class TabbarCoordinatorImpl: Coordinator, TabbarCoordinator {
     func start() {
         let viewModel = TabbarViewModel(coordinator: self)
         let viewController = TabbarViewController(viewModel: viewModel)
-        dependencies.coordinatorFactoryProvider.memeCreatorCoordinator(
-            tabbar: viewController, dependencies: dependencies
-        ).start()
         dependencies.window.rootViewController = viewController
 
     }
