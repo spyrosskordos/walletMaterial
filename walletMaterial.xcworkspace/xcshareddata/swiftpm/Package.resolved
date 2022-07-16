@@ -37,6 +37,15 @@
       }
     },
     {
+      "identity" : "firebasewrapper",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/spyrosskordos/FirebaseWrapper",
+      "state" : {
+        "revision" : "8fcf3656f54133a2540cea68e1220c6aab629b48",
+        "version" : "1.0.0"
+      }
+    },
+    {
       "identity" : "googleappmeasurement",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/google/GoogleAppMeasurement.git",
