@@ -8,7 +8,7 @@
 import Common
 import Foundation
 import UIKit
-
+import CoordinatorTools
 public struct MemeCreatorRequirements: Requirements {
     let dependencies: Dependencies
     let tabbar: Tabbar

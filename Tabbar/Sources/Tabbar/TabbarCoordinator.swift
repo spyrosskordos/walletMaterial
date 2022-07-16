@@ -8,6 +8,7 @@
 import Common
 import Foundation
 import UIKit
+import CoordinatorTools
 
 public struct TabbarRequirements: Requirements {
 

@@ -7,11 +7,10 @@
 
 import Foundation
 import UIKit
+import CoordinatorTools
 
-public protocol CoordinatorFactoryProvider {
-    func makeCoordinatorFactory<Factory: CoordinatorFactory>(
-        for requirements: Factory.R
-    ) -> Factory
+public protocol AppCoordinatorFactoryProvider:CoordinatorFactoryProvider {
+    
     func tabbarCoordinator(dependencies: Dependencies) -> Coordinator
     func memeCreatorCoordinator(tabbar: Tabbar,dependencies: Dependencies) -> Coordinator
 
@@ -20,9 +19,9 @@ public protocol CoordinatorFactoryProvider {
 public struct Dependencies {
 
     public let window: UIWindow
-    public let coordinatorFactoryProvider: CoordinatorFactoryProvider
+    public let coordinatorFactoryProvider: AppCoordinatorFactoryProvider
 
-    public init(window: UIWindow, coordinatorFactoryProvider: CoordinatorFactoryProvider) {
+    public init(window: UIWindow, coordinatorFactoryProvider: AppCoordinatorFactoryProvider) {
         self.window = window
         self.coordinatorFactoryProvider = coordinatorFactoryProvider
     }
