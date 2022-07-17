@@ -9,8 +9,8 @@ import Foundation
 
 class SignInViewModel: ObservableObject {
     private let coordinator: SignInCoordinator
-    
-    init(coordinator: SignInCoordinator){
+
+    init(coordinator: SignInCoordinator) {
         self.coordinator = coordinator
     }
 }

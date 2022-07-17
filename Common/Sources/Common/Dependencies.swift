@@ -12,6 +12,8 @@ import CoordinatorTools
 public protocol AppCoordinatorFactoryProvider:CoordinatorFactoryProvider {
     
     func tabbarCoordinator(dependencies: Dependencies) -> Coordinator
+    
+    func signInCoordinator(dependencies: Dependencies) -> Coordinator
 
 }
 

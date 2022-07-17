@@ -9,6 +9,7 @@ import Combine
 import Common
 import Foundation
 import Tabbar
+import SignIn
 import CoordinatorTools
 
 struct WalletMaterialCoordinatorFactoryProvider: AppCoordinatorFactoryProvider {
@@ -22,5 +23,8 @@ struct WalletMaterialCoordinatorFactoryProvider: AppCoordinatorFactoryProvider {
         let requirements = TabbarRequirements(dependencies: dependencies)
         return TabbarCoordinatorFactory().makeCoordinator(for: requirements)
     }
-
+    func signInCoordinator(dependencies: Dependencies) -> Coordinator {
+        let requirements = SignInRequirements(dependencies: dependencies)
+        return SignInCoordinatorFactory().makeCoordinator(for: requirements)
+    }
 }
