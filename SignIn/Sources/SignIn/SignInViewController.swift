@@ -23,9 +23,7 @@ class SignInViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        self.addSubSwiftUIView(SignInView(viewModel: self.viewModel), to: self.view)
     }
-
-  
 
 }

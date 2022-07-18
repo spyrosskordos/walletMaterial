@@ -1,18 +1,27 @@
 //
 //  SignInView.swift
-//  
+//
 //
 //  Created by Sko on 17/7/22.
 //
 
+import Common
 import SwiftUI
 
 struct SignInView: View {
-    
+
     @StateObject var viewModel: SignInViewModel
-    
+
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            Spacer()
+            Button("Sign In") {
+                viewModel.signIn()
+            }
+            .buttonStyle(RadiusButtonStyle())
+            .frame(maxWidth: .infinity)
+            .padding()
+        }
     }
 }
 

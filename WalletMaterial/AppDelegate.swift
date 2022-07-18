@@ -17,7 +17,6 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var dependencies: Dependencies!
     var window: UIWindow?
-    @Published var authState: AuthState!
     var cancellables = Set<AnyCancellable>()
 
     func application(
@@ -26,13 +25,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     ) -> Bool {
         FirebaseApp.configure()
         let authService = AuthService()
-        authState = AuthState(authService: authService)
         let window = UIWindow()
         self.window = window
         self.dependencies = Dependencies(
             window: window, coordinatorFactoryProvider: WalletMaterialCoordinatorFactoryProvider())
-        authState.publisher.sink { authState in
-            if authState.isLoggedIn {
+        authService.observeAuthChanges().sink { user in
+            if let user = user {
                 self.dependencies.coordinatorFactoryProvider
                     .tabbarCoordinator(dependencies: self.dependencies)
                     .start()
@@ -42,7 +40,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 ).start()
             }
         }.store(in: &cancellables)
-
+        self.dependencies.coordinatorFactoryProvider.signInCoordinator(
+            dependencies: self.dependencies, authService: authService
+        ).start()
         window.makeKeyAndVisible()
         return true
     }

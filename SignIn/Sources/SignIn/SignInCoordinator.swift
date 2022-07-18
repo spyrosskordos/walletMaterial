@@ -29,6 +29,7 @@ internal final class SignInCoordinatorImpl: Coordinator, SignInCoordinator {
 
     let dependencies: Dependencies
     let authService: AuthServiceProtocol
+    
     fileprivate init(requirements: SignInRequirements) {
         self.dependencies = requirements.dependencies
         self.authService = requirements.authService
