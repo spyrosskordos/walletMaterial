@@ -5,9 +5,6 @@
       location = "group:SignIn">
    </FileRef>
    <FileRef
-      location = "group:../MyProjects/AuthService">
-   </FileRef>
-   <FileRef
       location = "group:Common">
    </FileRef>
    <FileRef
