@@ -10,11 +10,11 @@ let package = Package(
         // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
             name: "SignIn",
-            targets: ["SignIn"]),
+            targets: ["SignIn"])
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
-        .package(path: "../Common"),
+        .package(path: "../Common")
 
     ],
     targets: [
@@ -22,7 +22,9 @@ let package = Package(
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
         .target(
             name: "SignIn",
-            dependencies: [  .product(name: "Common", package: "Common", condition: nil)]),
+            dependencies: [
+                .product(name: "Common", package: "Common", condition: nil)
+            ]),
         .testTarget(
             name: "SignInTests",
             dependencies: ["SignIn"]),

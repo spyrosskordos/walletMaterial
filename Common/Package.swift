@@ -18,14 +18,15 @@ let package = Package(
         .package(
             url: "https://github.com/spyrosskordos/CoordinatorTools",
             from: .init("1.0.0")!),
-        
+        .package(path: "../AuthService"),
     ],
     targets: [
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
         .target(
             name: "Common",
-            dependencies: [.product(name: "CoordinatorTools", package: "CoordinatorTools")]),
+            dependencies: [.product(name: "CoordinatorTools", package: "CoordinatorTools"),
+                           .product(name: "AuthService", package: "AuthService")]),
         .testTarget(
             name: "CommonTests",
             dependencies: ["Common"]),

@@ -8,13 +8,16 @@
 import Common
 import CoordinatorTools
 import Foundation
-
+import AuthService
 public struct SignInRequirements: Requirements {
     let dependencies: Dependencies
+    let authService: AuthServiceProtocol
     public init(
-        dependencies: Dependencies
+        dependencies: Dependencies,
+        authService: AuthServiceProtocol
     ) {
         self.dependencies = dependencies
+        self.authService = authService
     }
 }
 
@@ -25,12 +28,14 @@ protocol SignInCoordinator {
 internal final class SignInCoordinatorImpl: Coordinator, SignInCoordinator {
 
     let dependencies: Dependencies
+    let authService: AuthServiceProtocol
     fileprivate init(requirements: SignInRequirements) {
         self.dependencies = requirements.dependencies
+        self.authService = requirements.authService
     }
 
     func start() {
-        let viewModel = SignInViewModel(coordinator: self)
+        let viewModel = SignInViewModel(coordinator: self,authService: authService)
         let vc = SignInViewController(viewModel: viewModel)
         dependencies.window.rootViewController = vc
     }

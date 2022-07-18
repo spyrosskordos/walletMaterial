@@ -5,15 +5,17 @@
 //  Created by Sko on 9/7/22.
 //
 
+import AuthService
+import CoordinatorTools
 import Foundation
 import UIKit
-import CoordinatorTools
 
-public protocol AppCoordinatorFactoryProvider:CoordinatorFactoryProvider {
-    
+public protocol AppCoordinatorFactoryProvider: CoordinatorFactoryProvider {
+
     func tabbarCoordinator(dependencies: Dependencies) -> Coordinator
-    
-    func signInCoordinator(dependencies: Dependencies) -> Coordinator
+
+    func signInCoordinator(dependencies: Dependencies, authService: AuthServiceProtocol)
+        -> Coordinator
 
 }
 

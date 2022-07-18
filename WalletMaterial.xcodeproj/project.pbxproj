@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		6B00F57C287DE19400D1F185 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6B00F57B287DE19400D1F185 /* GoogleService-Info.plist */; };
-		6B0A8DE52883433F009E9DE2 /* AuthService in Frameworks */ = {isa = PBXBuildFile; productRef = 6B0A8DE42883433F009E9DE2 /* AuthService */; };
 		6B5C3109288444FA00597513 /* SignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 6B5C3108288444FA00597513 /* SignIn */; };
 		6B9E9820287C9D0C00847E2F /* Tabbar in Frameworks */ = {isa = PBXBuildFile; productRef = 6B9E981F287C9D0C00847E2F /* Tabbar */; };
 		6B9E9822287C9E0600847E2F /* CoordinatorFactoryProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B9E9821287C9E0600847E2F /* CoordinatorFactoryProvider.swift */; };
@@ -58,7 +57,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				6B5C3109288444FA00597513 /* SignIn in Frameworks */,
-				6B0A8DE52883433F009E9DE2 /* AuthService in Frameworks */,
 				6B9E9820287C9D0C00847E2F /* Tabbar in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -156,7 +154,6 @@
 			name = WalletMaterial;
 			packageProductDependencies = (
 				6B9E981F287C9D0C00847E2F /* Tabbar */,
-				6B0A8DE42883433F009E9DE2 /* AuthService */,
 				6B5C3108288444FA00597513 /* SignIn */,
 			);
 			productName = WalletMaterial;
@@ -605,10 +602,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		6B0A8DE42883433F009E9DE2 /* AuthService */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = AuthService;
-		};
 		6B5C3108288444FA00597513 /* SignIn */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = SignIn;

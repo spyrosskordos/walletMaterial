@@ -11,7 +11,7 @@ import Foundation
 import Tabbar
 import SignIn
 import CoordinatorTools
-
+import AuthService
 struct WalletMaterialCoordinatorFactoryProvider: AppCoordinatorFactoryProvider {
 
     func makeCoordinatorFactory<Factory>(for requirements: Factory.R) -> Factory
@@ -23,8 +23,8 @@ struct WalletMaterialCoordinatorFactoryProvider: AppCoordinatorFactoryProvider {
         let requirements = TabbarRequirements(dependencies: dependencies)
         return TabbarCoordinatorFactory().makeCoordinator(for: requirements)
     }
-    func signInCoordinator(dependencies: Dependencies) -> Coordinator {
-        let requirements = SignInRequirements(dependencies: dependencies)
+    func signInCoordinator(dependencies: Dependencies,authService: AuthServiceProtocol) -> Coordinator {
+        let requirements = SignInRequirements(dependencies: dependencies, authService: authService)
         return SignInCoordinatorFactory().makeCoordinator(for: requirements)
     }
 }

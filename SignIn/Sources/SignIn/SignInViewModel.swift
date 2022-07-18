@@ -6,11 +6,13 @@
 //
 
 import Foundation
-
+import AuthService
 class SignInViewModel: ObservableObject {
     private let coordinator: SignInCoordinator
-
-    init(coordinator: SignInCoordinator) {
+    private let authService: AuthServiceProtocol
+    init(coordinator: SignInCoordinator,authService: AuthServiceProtocol = AuthService()) {
         self.coordinator = coordinator
+        self.authService = authService
+        authService.signInAnonymously()
     }
 }
