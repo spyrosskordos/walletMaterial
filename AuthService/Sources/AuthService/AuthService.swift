@@ -10,12 +10,15 @@ import FirebaseAuth
 import FirebaseWrapper
 import Foundation
 
-final class AuthService: AuthServiceProtocol {
-    func currentUser() -> AnyPublisher<User?, Never> {
+
+public final class AuthService: AuthServiceProtocol {
+    public init() {}
+    
+    public  func currentUser() -> AnyPublisher<User?, Never> {
         Just(Auth.auth().currentUser).eraseToAnyPublisher()
     }
 
-    func signInAnonymously() -> AnyPublisher<User, SignInError> {
+    public  func signInAnonymously() -> AnyPublisher<User, SignInError> {
         return Future<User, SignInError> { promise in
             Auth.auth().signInAnonymously { result, error in
                 if let error = error {
@@ -28,7 +31,7 @@ final class AuthService: AuthServiceProtocol {
         }.eraseToAnyPublisher()
     }
 
-    func observeAuthChanges() -> AnyPublisher<User?, Never> {
+    public func observeAuthChanges() -> AnyPublisher<User?, Never> {
         Publishers.AuthPublisher().eraseToAnyPublisher()
     }
 

@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		6B00F57C287DE19400D1F185 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6B00F57B287DE19400D1F185 /* GoogleService-Info.plist */; };
+		6B77CC482885F8000011B063 /* Tabbar in Frameworks */ = {isa = PBXBuildFile; productRef = 6B77CC472885F8000011B063 /* Tabbar */; };
+		6B77CC4A2885F8040011B063 /* SignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 6B77CC492885F8040011B063 /* SignIn */; };
 		6B9E9822287C9E0600847E2F /* CoordinatorFactoryProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B9E9821287C9E0600847E2F /* CoordinatorFactoryProvider.swift */; };
 		6BD470022879E9BB00D37AA9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD470012879E9BB00D37AA9 /* AppDelegate.swift */; };
 		6BD4700B2879E9BB00D37AA9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6BD4700A2879E9BB00D37AA9 /* Assets.xcassets */; };
@@ -37,6 +39,8 @@
 /* Begin PBXFileReference section */
 		6B00F57B287DE19400D1F185 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		6B7044572885F47C007101E0 /* Tabbar */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Tabbar; sourceTree = "<group>"; };
+		6B7044582885F70E007101E0 /* Tabbar */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Tabbar; sourceTree = "<group>"; };
+		6B7044592885F728007101E0 /* SignIn */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = SignIn; sourceTree = "<group>"; };
 		6B9E9821287C9E0600847E2F /* CoordinatorFactoryProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorFactoryProvider.swift; sourceTree = "<group>"; };
 		6BD46FFE2879E9BB00D37AA9 /* WalletMaterial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WalletMaterial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BD470012879E9BB00D37AA9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -55,6 +59,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B77CC4A2885F8040011B063 /* SignIn in Frameworks */,
+				6B77CC482885F8000011B063 /* Tabbar in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				6B7044572885F47C007101E0 /* Tabbar */,
+				6B7044582885F70E007101E0 /* Tabbar */,
 			);
 			name = Packages;
 			sourceTree = "<group>";
@@ -138,6 +145,7 @@
 		6BD470312879EE8F00D37AA9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6B7044592885F728007101E0 /* SignIn */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -159,6 +167,8 @@
 			);
 			name = WalletMaterial;
 			packageProductDependencies = (
+				6B77CC472885F8000011B063 /* Tabbar */,
+				6B77CC492885F8040011B063 /* SignIn */,
 			);
 			productName = WalletMaterial;
 			productReference = 6BD46FFE2879E9BB00D37AA9 /* WalletMaterial.app */;
@@ -604,6 +614,17 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		6B77CC472885F8000011B063 /* Tabbar */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Tabbar;
+		};
+		6B77CC492885F8040011B063 /* SignIn */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = SignIn;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 6BD46FF62879E9BB00D37AA9 /* Project object */;
 }
