@@ -32,7 +32,9 @@ internal final class SplashScreenCoordinatorImpl: Coordinator, SplashScreenCoord
     }
 
     func start() {
-
+        let viewModel = SplashScreenViewModel(coordinator: self)
+        let viewController = SplashScreenViewController(viewModel: viewModel)
+        dependencies.window.rootViewController = viewController
     }
 }
 

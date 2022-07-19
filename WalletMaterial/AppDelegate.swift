@@ -24,14 +24,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
     ) -> Bool {
         FirebaseApp.configure()
+        setUpAuthService()
         let window = UIWindow()
         self.window = window
         self.dependencies = Dependencies(
             window: window, coordinatorFactoryProvider: WalletMaterialCoordinatorFactoryProvider())
-        setUpAuthService()
-        self.dependencies.coordinatorFactoryProvider.signInCoordinator(
-            dependencies: self.dependencies, authService: authService
-        ).start()
+        dependencies
+            .coordinatorFactoryProvider
+            .splashScreenCoordinator(dependencies: dependencies)
+            .start()
         window.makeKeyAndVisible()
         return true
     }
@@ -49,6 +50,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 ).start()
             }
         }.store(in: &cancellables)
-       
+
     }
 }

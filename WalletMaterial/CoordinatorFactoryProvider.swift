@@ -5,13 +5,15 @@
 //  Created by Sko on 11/7/22.
 //
 
+import AuthService
 import Combine
 import Common
-import Foundation
-import Tabbar
-import SignIn
 import CoordinatorTools
-import AuthService
+import Foundation
+import SignIn
+import SplashScreen
+import Tabbar
+
 struct WalletMaterialCoordinatorFactoryProvider: AppCoordinatorFactoryProvider {
 
     func makeCoordinatorFactory<Factory>(for requirements: Factory.R) -> Factory
@@ -23,8 +25,16 @@ struct WalletMaterialCoordinatorFactoryProvider: AppCoordinatorFactoryProvider {
         let requirements = TabbarRequirements(dependencies: dependencies)
         return TabbarCoordinatorFactory().makeCoordinator(for: requirements)
     }
-    func signInCoordinator(dependencies: Dependencies,authService: AuthServiceProtocol) -> Coordinator {
+
+    func signInCoordinator(dependencies: Dependencies, authService: AuthServiceProtocol)
+        -> Coordinator
+    {
         let requirements = SignInRequirements(dependencies: dependencies, authService: authService)
         return SignInCoordinatorFactory().makeCoordinator(for: requirements)
+    }
+
+    func splashScreenCoordinator(dependencies: Dependencies) -> Coordinator {
+        let requirements = SplashScreenRequirements(dependencies: dependencies)
+        return SplashScreenCoordinatorFactory().makeCoordinator(for: requirements)
     }
 }
