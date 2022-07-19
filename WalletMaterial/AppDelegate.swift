@@ -24,11 +24,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
     ) -> Bool {
         FirebaseApp.configure()
-        let authService = AuthService()
         let window = UIWindow()
         self.window = window
         self.dependencies = Dependencies(
             window: window, coordinatorFactoryProvider: WalletMaterialCoordinatorFactoryProvider())
+        setUpAuthService()
+        self.dependencies.coordinatorFactoryProvider.signInCoordinator(
+            dependencies: self.dependencies, authService: authService
+        ).start()
+        window.makeKeyAndVisible()
+        return true
+    }
+
+    func setUpAuthService() {
+        let authService = AuthService()
         authService.observeAuthChanges().sink { user in
             if let user = user {
                 self.dependencies.coordinatorFactoryProvider
@@ -40,11 +49,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 ).start()
             }
         }.store(in: &cancellables)
-        self.dependencies.coordinatorFactoryProvider.signInCoordinator(
-            dependencies: self.dependencies, authService: authService
-        ).start()
-        window.makeKeyAndVisible()
-        return true
+       
     }
-
 }
