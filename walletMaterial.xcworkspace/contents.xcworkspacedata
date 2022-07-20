@@ -2,16 +2,19 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:SplashScreen">
+      location = "group:Settings">
    </FileRef>
    <FileRef
       location = "group:AuthService">
    </FileRef>
    <FileRef
-      location = "group:SignIn">
+      location = "group:Common">
    </FileRef>
    <FileRef
-      location = "group:Common">
+      location = "group:SplashScreen">
+   </FileRef>
+   <FileRef
+      location = "group:SignIn">
    </FileRef>
    <FileRef
       location = "group:MemeCreator">
