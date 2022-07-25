@@ -23,8 +23,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/spyrosskordos/CoordinatorTools",
       "state" : {
-        "revision" : "65f535c2ae21d0c3592881ece8c3a8258e895f24",
-        "version" : "1.0.1"
+        "revision" : "4ba3a693eefb0aff37f6a17fd14c09fb544a7763",
+        "version" : "1.0.0"
       }
     },
     {
