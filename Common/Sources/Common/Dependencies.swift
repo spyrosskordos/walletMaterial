@@ -17,7 +17,9 @@ public protocol AppCoordinatorFactoryProvider: CoordinatorFactoryProvider {
     func signInCoordinator(dependencies: Dependencies, authService: AuthServiceProtocol)
         -> Coordinator
 
-    func splashScreenCoordinator(dependencies: Dependencies) -> Coordinator 
+    func splashScreenCoordinator(dependencies: Dependencies) -> Coordinator
+
+    func settingsCoordinator(dependencies: Dependencies, tabbar: Tabbar) -> Coordinator
 }
 
 public struct Dependencies {

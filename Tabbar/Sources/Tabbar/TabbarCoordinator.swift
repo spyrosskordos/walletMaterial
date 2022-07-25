@@ -6,9 +6,9 @@
 //
 
 import Common
+import CoordinatorTools
 import Foundation
 import UIKit
-import CoordinatorTools
 
 public struct TabbarRequirements: Requirements {
 
@@ -35,6 +35,10 @@ internal final class TabbarCoordinatorImpl: Coordinator, TabbarCoordinator {
         let viewModel = TabbarViewModel(coordinator: self)
         let viewController = TabbarViewController(viewModel: viewModel)
         dependencies.window.rootViewController = viewController
+        dependencies.coordinatorFactoryProvider.settingsCoordinator(
+            dependencies: dependencies,
+            tabbar: viewController
+        ).start()
 
     }
 }

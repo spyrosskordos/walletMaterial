@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		6B00F57C287DE19400D1F185 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6B00F57B287DE19400D1F185 /* GoogleService-Info.plist */; };
+		6B0271BD288F110B00C1FCAD /* Settings in Frameworks */ = {isa = PBXBuildFile; productRef = 6B0271BC288F110B00C1FCAD /* Settings */; };
 		6B77CC482885F8000011B063 /* Tabbar in Frameworks */ = {isa = PBXBuildFile; productRef = 6B77CC472885F8000011B063 /* Tabbar */; };
 		6B77CC4A2885F8040011B063 /* SignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 6B77CC492885F8040011B063 /* SignIn */; };
 		6B9E9822287C9E0600847E2F /* CoordinatorFactoryProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B9E9821287C9E0600847E2F /* CoordinatorFactoryProvider.swift */; };
@@ -61,6 +62,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6B77CC4A2885F8040011B063 /* SignIn in Frameworks */,
+				6B0271BD288F110B00C1FCAD /* Settings in Frameworks */,
 				6B77CC482885F8000011B063 /* Tabbar in Frameworks */,
 				6BCB036B28872E0400563DE4 /* SplashScreen in Frameworks */,
 			);
@@ -172,6 +174,7 @@
 				6B77CC472885F8000011B063 /* Tabbar */,
 				6B77CC492885F8040011B063 /* SignIn */,
 				6BCB036A28872E0400563DE4 /* SplashScreen */,
+				6B0271BC288F110B00C1FCAD /* Settings */,
 			);
 			productName = WalletMaterial;
 			productReference = 6BD46FFE2879E9BB00D37AA9 /* WalletMaterial.app */;
@@ -619,6 +622,10 @@
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		6B0271BC288F110B00C1FCAD /* Settings */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Settings;
+		};
 		6B77CC472885F8000011B063 /* Tabbar */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Tabbar;

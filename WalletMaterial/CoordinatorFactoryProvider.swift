@@ -10,6 +10,7 @@ import Combine
 import Common
 import CoordinatorTools
 import Foundation
+import Settings
 import SignIn
 import SplashScreen
 import Tabbar
@@ -36,5 +37,10 @@ struct WalletMaterialCoordinatorFactoryProvider: AppCoordinatorFactoryProvider {
     func splashScreenCoordinator(dependencies: Dependencies) -> Coordinator {
         let requirements = SplashScreenRequirements(dependencies: dependencies)
         return SplashScreenCoordinatorFactory().makeCoordinator(for: requirements)
+    }
+
+    func settingsCoordinator(dependencies: Dependencies, tabbar: Tabbar) -> Coordinator {
+        let requirements = SettingsRequirements(dependencies: dependencies, tabbar: tabbar)
+        return SettingsCoordinatorFactory().makeCoordinator(for: requirements)
     }
 }
