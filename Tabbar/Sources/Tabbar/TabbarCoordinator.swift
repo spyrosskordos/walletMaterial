@@ -34,11 +34,11 @@ internal final class TabbarCoordinatorImpl: Coordinator, TabbarCoordinator {
     func start() {
         let viewModel = TabbarViewModel(coordinator: self)
         let viewController = TabbarViewController(viewModel: viewModel)
-        dependencies.window.rootViewController = viewController
         dependencies.coordinatorFactoryProvider.settingsCoordinator(
             dependencies: dependencies,
             tabbar: viewController
         ).start()
+        dependencies.window.rootViewController = viewController
 
     }
 }

@@ -37,7 +37,9 @@ internal final class SettingsCoordinatorImpl: Coordinator,
     func start() {
         let viewModel = SettingsViewModel(coordinator: self)
         let viewController = SettingsViewController(viewModel: viewModel)
-        tabbar.append(viewController: viewController)
+        let nvc = UINavigationController(rootViewController: viewController)
+        nvc.tabBarItem = UITabBarItem(title: "Settings", image: .add, selectedImage: .actions)
+        tabbar.append(viewController: nvc)
     }
 }
 
