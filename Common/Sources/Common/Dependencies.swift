@@ -20,3 +20,14 @@ public protocol AppCoordinatorFactoryProvider: CoordinatorFactoryProvider {
     func splashScreenCoordinator(dependencies: Dependencies) -> Coordinator 
 }
 
+public struct Dependencies {
+
+    public let window: UIWindow
+    public let coordinatorFactoryProvider: AppCoordinatorFactoryProvider
+
+    public init(window: UIWindow, coordinatorFactoryProvider: AppCoordinatorFactoryProvider) {
+        self.window = window
+        self.coordinatorFactoryProvider = coordinatorFactoryProvider
+    }
+
+}
